@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 min-h-screen flex items-center justify-center">
+  <div id="app" class="w-full max-w-sm bg-white p-8 rounded-2xl shadow-lg border">
+    <form id="loginForm" class="space-y-4">
+      <input id="idInput" type="text" placeholder="이메일 또는 전화번호" class="w-full border rounded-lg p-3 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500" required />
+      <input id="pwInput" type="password" placeholder="비밀번호" class="w-full border rounded-lg p-3 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500" required />
+      <button type="submit" class="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition">로그인</button>
+    </form>
+    <div class="text-center mt-6">
+      <button id="createBtn" class="text-blue-600 text-sm font-medium hover:underline">새 계정 만들기</button>
+    </div>
+  </div>
+  <script>
+    const form = document.getElementById('loginForm');
+    const createBtn = document.getElementById('createBtn');
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      form.reset();
+      alert('로그인 완료 (테스트용)');
+    });
+
+    createBtn.addEventListener('click', () => {
+      alert('회원가입 화면으로 이동 (다음 단계에서 제작)');
+    });
+  </script>
+</body>
+</html>
